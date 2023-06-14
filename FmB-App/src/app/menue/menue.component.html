@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menue.component.css">
+
+</head>
+<body>
+    <div class="page-container">
+        <header>
+          <div>
+            <button mat-button class="menu-button">
+              <mat-icon>menu</mat-icon>
+            </button>
+        
+            <a routerLink="/">
+              <span class="app-title">Hamburger Menu Demo</span>
+            </a>
+          </div>
+        </header>
+      </div>
+      <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #sidenav autoFocus="false" mode="over" [(opened)]="isMenuOpen" class="sidenav">
+          <a mat-button routerLink="/page1">Page 1</a>
+          <a mat-button routerLink="/page2">Page 2</a>
+          <a mat-button routerLink="/page3">Page 3</a>
+          <a mat-button routerLink="/page4">Page 4</a>
+          <a mat-button routerLink="/page5">Page 5</a>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <main>
+            <router-outlet></router-outlet>
+          </main>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+      <button mat-button class="menu-button" (click)="sidenav.toggle()">
+        <mat-icon>{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+      </button>
+      <mat-sidenav 
+  #sidenav 
+  autoFocus="false" 
+  mode="over" 
+  [(opened)]="isMenuOpen" 
+  class="sidenav" 
+  (click)="onSidenavClick()"
+  >
+  <!-- more code here -->
+</mat-sidenav>
+</body>
+</html>

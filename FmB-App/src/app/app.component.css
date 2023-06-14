@@ -1,0 +1,18 @@
+
+h1 {
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+}
+
+.startButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
