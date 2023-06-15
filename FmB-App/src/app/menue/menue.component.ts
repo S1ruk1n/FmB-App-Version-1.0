@@ -1,5 +1,4 @@
-import { Component, NgModule } from '@angular/core';
-import { AppUiModule } from '../app-ui.module';
+import { Component } from '@angular/core';
 
 
 
@@ -9,11 +8,7 @@ import { AppUiModule } from '../app-ui.module';
   styleUrls: ['./menue.component.css']
 })
 
-@NgModule ({
-  imports: [
-    AppUiModule
-  ]
-})
+
 export class MenueComponent {
 
 }
