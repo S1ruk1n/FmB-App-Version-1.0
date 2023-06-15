@@ -64,7 +64,7 @@ services:
     container_name: pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: sarukan99@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: sarukan
+      PGADMIN_DEFAULT_PASSWORD: sarukan99
     ports:
       - "5050:80"
     networks:
