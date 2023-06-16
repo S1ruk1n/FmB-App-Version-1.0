@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DbimporterService } from './dbimporter.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent{
   title = 'FmB-App';
   image1:string ='assets/images/FmB_App_logo.jpg'
+  
   
   
 }

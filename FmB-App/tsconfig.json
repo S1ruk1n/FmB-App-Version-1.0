@@ -22,12 +22,20 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "stream": [ "./node_modules/stream-browserify" ],
+      "path": [ "./node_modules/path-browserify" ],
+      "util": [ "./node_modules/util"],
+      "crypto":["./node_modules/crypto-browserify"]
+    },
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "exclude": ["node_modules"]
 }
