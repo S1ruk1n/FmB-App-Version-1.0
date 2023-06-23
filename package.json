@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "angular-in-memory-web-api": "^0.16.0",
     "fast-csv": "^4.3.6",
     "pg": "^8.11.0"
   }

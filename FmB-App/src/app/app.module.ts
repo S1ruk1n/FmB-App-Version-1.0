@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HauptseiteComponent } from './hauptseite/hauptseite.component';
 import { MenueComponent } from './menue/menue.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

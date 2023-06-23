@@ -1,25 +1,22 @@
-import { Client } from "pg"
+const { Client } = require('pg')
 
-export const pgClient = new Client({
-  // create a new connection to the database
- host: "localhost",
- user: "postgres",
- database: "postgres",
- password: "sarukan",
- port: 5432
+const client = new Client({
+    host: "localhost",
+    user: "postgres",
+    port: 5432,
+    password: "sarukan",
+    database: "postgres"
 })
 
-pgClient.on('error', err => console.log(err))
+client.connect();
 
-export const initPg = async () => {
-  await pgClient.connect()
-  await pgClient.query('CREATE TABLE IF NOT EXISTS Bank_db (Id integer Primary Key, Bank varchar(100), Name varchar(100), Sitz varchar(50), Land varchar(50), Verband varchar(50))')
-}
+client.query('Select * from banken_db',(err,  res)=>{
+    if(!err){
+        console.log(res.rows);
+    }else {
+        console.log(err.message);
+    }
+    client.end;
 
-export const resetPg = async () => {
-  await pgClient.query('DROP TABLE IF EXISTS Bank_db')
-  await pgClient.query('CREATE TABLE IF NOT EXISTS Bank_db (Id integer Primary Key, Bank varchar(100), Name varchar(100), Sitz varchar(50), Land varchar(50), Verband varchar(50))')
- 
-
-  console.log('Postgres DB flushed')
-}
+    console.log('Postgress DB flushed')
+})

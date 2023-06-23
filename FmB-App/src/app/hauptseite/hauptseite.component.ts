@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./hauptseite.component.css']
 })
 export class HauptseiteComponent {
+  image1:string ='assets/images/FmB_App_logo.jpg'
+
 
 }

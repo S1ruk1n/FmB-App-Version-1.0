@@ -1,3 +1,9 @@
 body {
     background-color: #02073F ;
 }
+
+
+input {
+    margin-left: 35%;
+    margin-top: 40%;
+}
